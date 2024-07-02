@@ -1,6 +1,7 @@
 import { createSlice  ,createAsyncThunk} from "@reduxjs/toolkit";
 import axiosInstance from "../helper/axios";
 import { toast } from "react-hot-toast";
+// import { GetCookie, RemoveCookie, SetCookie } from "../helper/cookie";
 
 const initialState = {
    userid: '',
@@ -144,12 +145,12 @@ const Slices =  createSlice({
      builder.addCase(getUserDataAsync.fulfilled, (state, action) => {
       // if(!action?.payload?.userDetail) return;
 
+      // GetCookie('token')
       state.loggedInUser = action?.payload
       state.menu =(action?.payload?.menuImg)
       state.domainStatus = action?.payload?.domainStatus
       state.domain = (action?.payload?.domain);
       state.isLoggedIn = true
-      
       
    
       
@@ -160,7 +161,8 @@ const Slices =  createSlice({
       toast.success('Menu Uploaded Successfully')
     });
     builder.addCase(loginAsync.fulfilled, (state, action) => {
-
+      //  RemoveCookie('token')
+      //  SetCookie('token', JSON.stringify(action?.payload?.data?.token))
     
       localStorage.setItem("isLoggedIn", true);
       state.loggedInUser = action?.payload?.userDetail;
