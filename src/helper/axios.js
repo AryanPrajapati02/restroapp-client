@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "restroapp-server.vercel.app/api/v1";
+const BASE_URL = "https://restroapp-server.vercel.app/api/v1";
 
 const axiosInstance = axios.create();
 
