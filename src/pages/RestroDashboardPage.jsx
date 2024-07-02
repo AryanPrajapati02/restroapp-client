@@ -58,7 +58,7 @@ useEffect(()=>{
         <h1 className='mt-5 p-5 font-bold text-2xl  text-white'>Your Restro :<span className='text-yellow-300 capitalize'> {user?.restroname}</span> </h1>
         <div className='bg-red-200 border-2 border-red-400  mr-5 ml-5 mt-5  rounded-2xl p-4 '>
           {user && domainStatus ?  
-       <><h2 className='text-xl font-semibold'>Your Domain : <span className='text-blue-700 underline'><a>http://{domain && domain}.localhost:5173</a></span>
+       <><h2 className='text-xl font-semibold'>Your Domain : <span className='text-blue-700 underline'><a>http://{domain && domain}.mykitab.live</a></span>
        <span className="whitespace-nowrap rounded-full bg-green-300 ml-2 px-2.5 py-0.5 text-sm text-green-800">
   Live
 </span>
